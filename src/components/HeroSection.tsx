@@ -13,24 +13,26 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden mt-24 md:mt-0">
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBackground})` }}
       />
+      {/* Black overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black/60" />
       <div className="absolute inset-0 bg-gradient-hero" />
       
       <div className="relative z-10 text-center px-4 md:px-8 lg:px-16 max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 delay-300 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Your Trusted Partner for
             <span className="text-primary block mt-2">Global Education</span>
             <span className="text-white block">Opportunities</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
             Transform your dreams into reality with expert guidance, personalized counseling, 
             and comprehensive support for studying abroad.
           </p>

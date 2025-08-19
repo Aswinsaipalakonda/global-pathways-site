@@ -3,31 +3,31 @@ import { useEffect, useState, useRef } from 'react';
 const destinations = [
   {
     country: 'United States',
-    flag: '🇺🇸',
+  image: '/images/USA.png', // Place your image in public/assets/USA.webp
     landmark: 'Statue of Liberty',
     description: 'World-class universities and diverse opportunities'
   },
   {
     country: 'United Kingdom',
-    flag: '🇬🇧',
+    image: '/images/UK.png',
     landmark: 'Big Ben',
     description: 'Rich academic heritage and global recognition'
   },
   {
     country: 'Canada',
-    flag: '🇨🇦',
+    image: '/images/Canada.png',
     landmark: 'CN Tower',
     description: 'High quality education and post-study work options'
   },
   {
     country: 'Australia',
-    flag: '🇦🇺',
+    image: '/images/Australia.png',
     landmark: 'Sydney Opera House',
     description: 'Innovation-focused programs and beautiful lifestyle'
   },
   {
     country: 'Germany',
-    flag: '🇩🇪',
+    image: '/images/Germany.png',
     landmark: 'Brandenburg Gate',
     description: 'Engineering excellence and affordable education'
   }
@@ -81,8 +81,13 @@ const DestinationsSection = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="text-center">
-                <div className="text-6xl mb-4 transform hover:scale-110 transition-transform duration-300">
-                  {destination.flag}
+                <div className="mb-4 flex justify-center">
+                  <img
+                    src={destination.image}
+                    alt={destination.country + ' image'}
+                    className="w-full h-40 md:h-56 object-cover rounded-2xl shadow-md bg-white border border-border"
+                    style={{ maxWidth: '100%', aspectRatio: '16/9' }}
+                  />
                 </div>
                 
                 <h3 className="text-2xl font-bold text-foreground mb-2">

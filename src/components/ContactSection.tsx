@@ -36,8 +36,15 @@ const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const whatsappMessage = `Hi, I'm ${formData.name}. My email is ${formData.email} and phone is ${formData.phone}. I would like to know more about studying abroad. My message: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/918978636798?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappMessage =
+      `👋 *New Study Abroad Inquiry*\n` +
+      `\n` +
+      `🙍‍♂️ *Name:* ${formData.name}\n` +
+      `✉️ *Email:* ${formData.email}\n` +
+      `📞 *Phone:* ${formData.phone}\n` +
+      `🎓 *Interest:* I would like to know more about studying abroad.\n` +
+      `📝 *Message:* ${formData.message}`;
+    const whatsappUrl = `https://wa.me/917396620303?text=${encodeURIComponent(whatsappMessage)}`;
     
     window.open(whatsappUrl, '_blank');
     
@@ -75,7 +82,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+91 8978636798</p>
+                  <p className="text-muted-foreground">+91 7396620303</p>
+                  <p className="text-muted-foreground">+91 9059231695</p>
                 </div>
               </div>
               
@@ -85,7 +93,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <p className="text-muted-foreground">info@rightoverseas.com</p>
+                  <p className="text-muted-foreground">info.rightoverseassolutions@gmail.com</p>
                 </div>
               </div>
               
@@ -95,7 +103,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Office</h4>
-                  <p className="text-muted-foreground">Education Consultancy Center<br />City, State, India</p>
+                  <p className="text-muted-foreground"> Visakhapatnam, Andhra Pradesh, India</p>
                 </div>
               </div>
             </div>
@@ -116,7 +124,7 @@ const ContactSection = () => {
             isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
           }`}>
             <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-8 shadow-elegant">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Send us a Message</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-6">Want to Contact</h3>
               
               <div className="space-y-6">
                 <div>
@@ -187,7 +195,7 @@ const ContactSection = () => {
                   className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold text-lg hover:bg-primary-glow transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2 shadow-gold"
                 >
                   <Send className="w-5 h-5" />
-                  <span>Send Message via WhatsApp</span>
+                  <span>Send </span>
                 </button>
               </div>
             </form>

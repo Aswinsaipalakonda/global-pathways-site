@@ -6,7 +6,7 @@ const Footer = () => {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/918978636798', '_blank');
+    window.open('https://wa.me/917396620303', '_blank');
   };
 
   return (
@@ -23,18 +23,39 @@ const Footer = () => {
               <button 
                 onClick={openWhatsApp}
                 className="p-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-300 hover:scale-110 transform"
+                aria-label="WhatsApp"
               >
                 <MessageCircle className="w-5 h-5" />
               </button>
-              <button className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 hover:scale-110 transform">
+              {/*
+              <a
+                href="https://www.linkedin.com/company/rightoverseassolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300 hover:scale-110 transform"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors duration-300 hover:scale-110 transform">
+              </a>
+              */}
+              <a
+                href="https://www.instagram.com/right_overseas_solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-pink-600 text-white rounded-full hover:bg-pink-700 transition-colors duration-300 hover:scale-110 transform"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5" />
-              </button>
-              <button className="p-3 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition-colors duration-300 hover:scale-110 transform">
+              </a>
+              <a
+                href="https://www.facebook.com/share/198cCFD5AV/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-blue-800 text-white rounded-full hover:bg-blue-900 transition-colors duration-300 hover:scale-110 transform"
+                aria-label="Facebook"
+              >
                 <Facebook className="w-5 h-5" />
-              </button>
+              </a>
             </div>
           </div>
           
@@ -89,7 +110,7 @@ const Footer = () => {
         
         <div className="border-t border-secondary-foreground/20 mt-12 pt-8 text-center">
           <p className="text-secondary-foreground/60">
-            © 2024 Right Overseas Solutions. All rights reserved. | 
+            © 2025 Right Overseas Solutions. All rights reserved. | 
             <span className="text-primary"> Empowering Dreams, Enabling Futures</span>
           </p>
         </div>

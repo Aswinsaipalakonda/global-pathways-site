@@ -18,9 +18,9 @@ Gold & Black Professional Theme - All colors MUST be HSL.
     --popover-foreground: 0 0% 0%;
 
     /* Gold Primary Theme */
-    --primary: 45 94% 41%;
+    --primary: 45 94% 51%;
     --primary-foreground: 0 0% 0%;
-    --primary-glow: 45 94% 51%;
+    --primary-glow: 45 94% 43%;
 
     /* Black Secondary */
     --secondary: 0 0% 0%;
@@ -128,15 +128,14 @@ Gold & Black Professional Theme - All colors MUST be HSL.
   }
 
   .country-card {
-    @apply bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl 
-           transition-all duration-500 hover:scale-105 cursor-pointer
-           border border-border hover:border-primary;
-    transition: var(--transition-smooth);
+  @apply bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl 
+       transition-all duration-100 hover:scale-105 cursor-pointer
+       border border-border hover:border-primary;
   }
 
   .testimonial-card {
     @apply bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl
-           transition-all duration-300 hover:scale-102 border border-border
+           transition-all duration-300 hover:scale-105 border border-border
            hover:border-primary;
   }
 

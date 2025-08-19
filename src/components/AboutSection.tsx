@@ -2,8 +2,12 @@ import { useEffect, useState, useRef } from 'react';
 import teamPhoto from '@/assets/team-photo.jpg';
 
 const AboutSection = () => {
+
   const [isVisible, setIsVisible] = useState(false);
+  const [studentsCount, setStudentsCount] = useState(0);
+  const [universitiesCount, setUniversitiesCount] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,6 +25,30 @@ const AboutSection = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Counter animation
+  useEffect(() => {
+    if (isVisible) {
+      let studentsTarget = 1000;
+      let universitiesTarget = 50;
+      let studentsCurrent = 0;
+      let universitiesCurrent = 0;
+      const studentsStep = Math.ceil(studentsTarget / 60);
+      const universitiesStep = Math.ceil(universitiesTarget / 60);
+      const interval = setInterval(() => {
+        studentsCurrent += studentsStep;
+        universitiesCurrent += universitiesStep;
+        if (studentsCurrent >= studentsTarget) studentsCurrent = studentsTarget;
+        if (universitiesCurrent >= universitiesTarget) universitiesCurrent = universitiesTarget;
+        setStudentsCount(studentsCurrent);
+        setUniversitiesCount(universitiesCurrent);
+        if (studentsCurrent === studentsTarget && universitiesCurrent === universitiesTarget) {
+          clearInterval(interval);
+        }
+      }, 16);
+      return () => clearInterval(interval);
+    }
+  }, [isVisible]);
 
   return (
     <section ref={sectionRef} id="about" className="section-padding bg-muted">
@@ -55,11 +83,11 @@ const AboutSection = () => {
 
             <div className="grid grid-cols-2 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">1000+</div>
+                <div className="text-4xl font-bold text-primary mb-2">{studentsCount}+</div>
                 <div className="text-muted-foreground">Students Placed</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                <div className="text-4xl font-bold text-primary mb-2">{universitiesCount}+</div>
                 <div className="text-muted-foreground">Universities</div>
               </div>
             </div>
