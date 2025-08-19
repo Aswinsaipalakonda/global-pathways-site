@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# Preview
 
-## Project info
+View the live site here: [Right Overseas Solutions](https://rightoverseassolutions.vercel.app/)
 
-**URL**: https://lovable.dev/projects/cead3f9c-fe00-4eb2-8780-6bc8267f348a
+# Global Pathways Site
 
-## How can I edit this code?
+A modern, responsive React web application for Right Overseas Solutions, a global education consultancy. This project helps students explore study destinations, book counseling, and connect with the consultancy for international education guidance.
 
-There are several ways of editing your application.
+## Project Structure
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/cead3f9c-fe00-4eb2-8780-6bc8267f348a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── public/
+│   ├── favicon.ico
+│   ├── placeholder.svg
+│   ├── robots.txt
+│   └── assets/
+│       ├── hero-background.jpg
+│       ├── logo.png
+│       ├── team-photo.jpg
+│       └── ... (country images)
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── index.css
+│   ├── App.css
+│   ├── vite-env.d.ts
+│   ├── assets/
+│   ├── components/
+│   │   ├── AboutSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   ├── DestinationsSection.tsx
+│   │   ├── Footer.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── Navigation.tsx
+│   │   ├── TestimonialsSection.tsx
+│   │   ├── WhatsAppFloat.tsx
+│   │   └── ui/ (UI primitives)
+│   ├── hooks/
+│   ├── lib/
+│   └── pages/
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── vite.config.ts
+└── README.md
 ```
 
-**Edit a file directly in GitHub**
+## Tech Stack
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- **React** (with TypeScript)
+- **Vite** (for fast development/build)
+- **Tailwind CSS** (utility-first styling)
+- **Lucide React** (icon library)
+- **PostCSS** (for CSS processing)
+- **ESLint** (code linting)
 
-**Use GitHub Codespaces**
+## Features
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Responsive hero section with animated text and call-to-action buttons
+- Navigation bar with mobile hamburger menu
+- Destinations section with animated cards and country images
+- About section with animated counters
+- Testimonials and contact form (WhatsApp integration)
+- Floating WhatsApp chat button
+- Modern, accessible UI with custom design tokens
 
-## What technologies are used for this project?
+## Getting Started
 
-This project is built with:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
+4. **Preview production build:**
+   ```bash
+   npm run preview
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Deployment
 
-## How can I deploy this project?
+- Easily deployable to Vercel, Netlify, or GitHub Pages.
+- For GitHub Pages, use a tool like `gh-pages` and set the `base` in `vite.config.ts`.
 
-Simply open [Lovable](https://lovable.dev/projects/cead3f9c-fe00-4eb2-8780-6bc8267f348a) and click on Share -> Publish.
+## Customization
 
-## Can I connect a custom domain to my Lovable project?
+- Add your own images to `public/assets/` for destinations and branding.
+- Update theme colors in `src/index.css` and `tailwind.config.ts`.
+- Edit content in the respective components under `src/components/`.
 
-Yes, you can!
+## License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+MIT License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+---
+
+For any queries or support, contact [Right Overseas Solutions](mailto:info@rightoverseas.com).
