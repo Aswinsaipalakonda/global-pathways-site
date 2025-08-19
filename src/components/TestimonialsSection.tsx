@@ -92,7 +92,7 @@ const TestimonialsSection = () => {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          <div className="testimonial-card min-h-[400px] flex items-center">
+            <div className="testimonial-card min-h-[400px] flex items-center">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center w-full">
               <div className="text-center">
                 <div className="text-8xl mb-4">
