@@ -100,4 +100,4 @@ MIT License
 
 ---
 
-For any queries or support, contact [Right Overseas Solutions](mailto:info@rightoverseas.com).
+For any queries or support, contact aswinsaipalakonda@gmail.com
