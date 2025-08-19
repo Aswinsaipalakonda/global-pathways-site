@@ -2,41 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Right Overseas Solutions Design System 
+Gold & Black Professional Theme - All colors MUST be HSL.
 */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Gold Primary Theme */
+    --primary: 45 94% 41%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 45 94% 51%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Black Secondary */
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 94% 41%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 96%;
+    --ring: 45 94% 41%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(196,142,8,0.3));
+    --shadow-gold: 0 10px 30px -10px hsl(var(--primary) / 0.3);
+    --shadow-elegant: 0 20px 60px -20px rgba(0,0,0,0.2);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +112,55 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-button {
+    @apply bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground 
+           px-8 py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl 
+           transition-all duration-300 hover:scale-105;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .country-card {
+    @apply bg-card rounded-2xl p-6 shadow-lg hover:shadow-2xl 
+           transition-all duration-500 hover:scale-105 cursor-pointer
+           border border-border hover:border-primary;
+    transition: var(--transition-smooth);
+  }
+
+  .testimonial-card {
+    @apply bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl
+           transition-all duration-300 hover:scale-102 border border-border
+           hover:border-primary;
+  }
+
+  .nav-link {
+    @apply text-foreground hover:text-primary transition-colors duration-300 
+           font-medium relative after:content-[''] after:absolute after:w-0 
+           after:h-0.5 after:bottom-0 after:left-0 after:bg-primary 
+           after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-10 transition-all duration-700;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .whatsapp-float {
+    @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full 
+           shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50;
   }
 }
