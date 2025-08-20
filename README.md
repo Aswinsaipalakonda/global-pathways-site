@@ -86,7 +86,7 @@ A modern, responsive React web application for Right Overseas Solutions, a globa
 ## Deployment
 
 - Easily deployable to Vercel, Netlify, or GitHub Pages.
-- For GitHub Pages, use a tool like `gh-pages` and set the `base` in
+- For GitHub Pages, use a tool like `gh-pages` and set the `base`
 
 ## Customization
 
