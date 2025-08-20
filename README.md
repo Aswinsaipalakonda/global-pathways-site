@@ -86,7 +86,6 @@ A modern, responsive React web application for Right Overseas Solutions, a globa
 ## Deployment
 
 - Easily deployable to Vercel, Netlify, or GitHub Pages.
-- For 
 
 ## Customization
 
